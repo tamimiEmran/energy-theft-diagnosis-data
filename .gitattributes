@@ -1,0 +1,3 @@
+# Preserve release bytes so checksums are identical on Windows and Unix.
+* -text
+*.parquet binary

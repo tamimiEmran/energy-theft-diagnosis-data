@@ -1,0 +1,71 @@
+{
+  "n_scored": 1520,
+  "fidelity": {
+    "rouge_l_mean": 0.4309
+  },
+  "objective_param_extraction": {
+    "n": 375,
+    "mentioned_rate": 0.824,
+    "correct_rate": 0.6293
+  },
+  "by_attack": {
+    "attack0": {
+      "n": 130,
+      "rouge_l": 0.6246
+    },
+    "attack1": {
+      "n": 126,
+      "rouge_l": 0.3663
+    },
+    "attack10": {
+      "n": 130,
+      "rouge_l": 0.383
+    },
+    "attack12": {
+      "n": 130,
+      "rouge_l": 0.3304
+    },
+    "attack2": {
+      "n": 130,
+      "rouge_l": 0.5357
+    },
+    "attack3": {
+      "n": 130,
+      "rouge_l": 0.3492
+    },
+    "attack4": {
+      "n": 119,
+      "rouge_l": 0.2793
+    },
+    "attack5": {
+      "n": 130,
+      "rouge_l": 0.3811
+    },
+    "attack6": {
+      "n": 130,
+      "rouge_l": 0.4509
+    },
+    "attack7": {
+      "n": 105,
+      "rouge_l": 0.3378
+    },
+    "attack9": {
+      "n": 130,
+      "rouge_l": 0.5442
+    },
+    "attackieee": {
+      "n": 130,
+      "rouge_l": 0.5554
+    }
+  },
+  "by_gen_method": {
+    "label_blind": {
+      "n": 1349,
+      "rouge_l": 0.4418
+    },
+    "rationalization": {
+      "n": 171,
+      "rouge_l": 0.3445
+    }
+  }
+}

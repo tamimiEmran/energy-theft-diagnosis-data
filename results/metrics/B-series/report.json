@@ -1,0 +1,24 @@
+{
+  "n_train": 6589,
+  "n_eval": 1650,
+  "skipped_train": 0,
+  "skipped_eval": 0,
+  "written": {
+    "B-tree-randomforest": {
+      "model": "randomforest",
+      "path": "/home/jupyter/LLM_finetuning/results/predictions/B-tree-randomforest.parquet",
+      "bal_acc": 0.8474949392712551,
+      "macro_f1": 0.9121992402743353
+    },
+    "B-logreg": {
+      "model": "logreg",
+      "path": "/home/jupyter/LLM_finetuning/results/predictions/B-logreg.parquet",
+      "bal_acc": 0.8668522267206478
+    },
+    "B-lof": {
+      "model": "lof",
+      "path": "/home/jupyter/LLM_finetuning/results/predictions/B-lof.parquet",
+      "bal_acc": 0.8209008097165993
+    }
+  }
+}

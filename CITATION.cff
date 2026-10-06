@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+type: dataset
+message: "Please cite this dataset and the original UCI consumption dataset when using these files."
+title: "Energy-theft diagnosis: derived benchmark and model predictions"
+authors:
+  - family-names: Altamimi
+    given-names: Emran
+  - family-names: Jemmieh
+    given-names: Moaz
+  - family-names: Al-Ali
+    given-names: Abdulaziz
+  - family-names: Malluhi
+    given-names: Qutaibah M.
+version: 1.0.0
+date-released: 2026-10-06
+url: "https://github.com/tamimiEmran/energy-theft-diagnosis-data"
+repository-code: "https://github.com/tamimiEmran/energy-theft-diagnosis-data"
+license: CC-BY-4.0
+keywords:
+  - electricity theft
+  - smart meters
+  - large language models
+  - classification
+  - explainability

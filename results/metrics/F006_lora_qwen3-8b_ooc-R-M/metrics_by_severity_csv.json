@@ -1,0 +1,116 @@
+{
+  "handle": "F006_lora_qwen3-8b_ooc-R-M",
+  "regime": "explainability_csv",
+  "join": {
+    "matched": 635,
+    "unmatched": 0,
+    "key": "row_id"
+  },
+  "severity_proxy": "relative_energy_reduction",
+  "ground_truth": "realized manipulation parameter recomputed from readings (= CSV observed_factor for magnitude attacks); energy proxy is the universal axis for attacks without a scalar parameter",
+  "bucket_edges": [
+    0.0,
+    0.1,
+    0.3,
+    0.6,
+    1.0
+  ],
+  "shape_only_excluded": [
+    "attack9",
+    "attack10"
+  ],
+  "n_manipulated": 505,
+  "n_manipulated_magnitude": 505,
+  "n_original": 130,
+  "buckets": [
+    {
+      "range": [
+        0.0,
+        0.1
+      ],
+      "n": 71,
+      "recall": 0.28169014084507044,
+      "multiclass_acc": 0.0
+    },
+    {
+      "range": [
+        0.1,
+        0.3
+      ],
+      "n": 69,
+      "recall": 0.7246376811594203,
+      "multiclass_acc": 0.0
+    },
+    {
+      "range": [
+        0.3,
+        0.6
+      ],
+      "n": 289,
+      "recall": 0.9965397923875432,
+      "multiclass_acc": 0.0
+    },
+    {
+      "range": [
+        0.6,
+        1.0
+      ],
+      "n": 76,
+      "recall": 1.0,
+      "multiclass_acc": 0.0
+    }
+  ],
+  "shape_only": {
+    "attacks": [
+      "attack9",
+      "attack10"
+    ],
+    "n": 0,
+    "recall": null,
+    "multiclass_acc": null
+  },
+  "by_attack": [
+    {
+      "attack_id": "attack1",
+      "param_type": "factor",
+      "n": 126,
+      "mean_realized_factor": 0.4795,
+      "mean_zeroed_fraction": 0.0045,
+      "mean_energy_proxy": 0.5205,
+      "recall": 0.9683
+    },
+    {
+      "attack_id": "attack3",
+      "param_type": null,
+      "n": 130,
+      "mean_realized_factor": 0.4465,
+      "mean_zeroed_fraction": 0.003,
+      "mean_energy_proxy": 0.5535,
+      "recall": 1.0
+    },
+    {
+      "attack_id": "attack4",
+      "param_type": "interval",
+      "n": 119,
+      "mean_realized_factor": 0.9387,
+      "mean_zeroed_fraction": 0.0004,
+      "mean_energy_proxy": 0.084,
+      "recall": 0.437
+    },
+    {
+      "attack_id": "attack5",
+      "param_type": null,
+      "n": 130,
+      "mean_realized_factor": 0.5003,
+      "mean_zeroed_fraction": 0.0,
+      "mean_energy_proxy": 0.4997,
+      "recall": 1.0
+    }
+  ],
+  "original_baseline": {
+    "n": 130,
+    "false_positives": 11,
+    "specificity": 0.9153846153846154
+  },
+  "corr_severity_vs_detection": 0.640310679042703
+}

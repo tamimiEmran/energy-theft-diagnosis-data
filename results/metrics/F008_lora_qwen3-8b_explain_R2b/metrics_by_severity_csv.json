@@ -1,0 +1,188 @@
+{
+  "handle": "F008_lora_qwen3-8b_explain_R2b",
+  "regime": "explainability_csv",
+  "join": {
+    "matched": 1650,
+    "unmatched": 0,
+    "key": "row_id"
+  },
+  "severity_proxy": "relative_energy_reduction",
+  "ground_truth": "realized manipulation parameter recomputed from readings (= CSV observed_factor for magnitude attacks); energy proxy is the universal axis for attacks without a scalar parameter",
+  "bucket_edges": [
+    0.0,
+    0.1,
+    0.3,
+    0.6,
+    1.0
+  ],
+  "shape_only_excluded": [
+    "attack9",
+    "attack10"
+  ],
+  "n_manipulated": 1520,
+  "n_manipulated_magnitude": 1260,
+  "n_original": 130,
+  "buckets": [
+    {
+      "range": [
+        0.0,
+        0.1
+      ],
+      "n": 138,
+      "recall": 0.9637681159420289,
+      "multiclass_acc": 0.08695652173913043
+    },
+    {
+      "range": [
+        0.1,
+        0.3
+      ],
+      "n": 195,
+      "recall": 0.9897435897435898,
+      "multiclass_acc": 0.1641025641025641
+    },
+    {
+      "range": [
+        0.3,
+        0.6
+      ],
+      "n": 529,
+      "recall": 0.9376181474480151,
+      "multiclass_acc": 0.13610586011342155
+    },
+    {
+      "range": [
+        0.6,
+        1.0
+      ],
+      "n": 398,
+      "recall": 0.9773869346733668,
+      "multiclass_acc": 0.25125628140703515
+    }
+  ],
+  "shape_only": {
+    "attacks": [
+      "attack9",
+      "attack10"
+    ],
+    "n": 260,
+    "recall": 0.9153846153846154,
+    "multiclass_acc": 0.0
+  },
+  "by_attack": [
+    {
+      "attack_id": "attack0",
+      "param_type": null,
+      "n": 130,
+      "mean_realized_factor": 0.0,
+      "mean_zeroed_fraction": 1.0,
+      "mean_energy_proxy": 1.0,
+      "recall": 1.0
+    },
+    {
+      "attack_id": "attack1",
+      "param_type": "factor",
+      "n": 126,
+      "mean_realized_factor": 0.4795,
+      "mean_zeroed_fraction": 0.0045,
+      "mean_energy_proxy": 0.5205,
+      "recall": 0.9762
+    },
+    {
+      "attack_id": "attack10",
+      "param_type": null,
+      "n": 130,
+      "mean_realized_factor": 1.0011,
+      "mean_zeroed_fraction": 0.0,
+      "mean_energy_proxy": 0.0425,
+      "recall": 0.8308
+    },
+    {
+      "attack_id": "attack12",
+      "param_type": null,
+      "n": 130,
+      "mean_realized_factor": 0.3819,
+      "mean_zeroed_fraction": 0.01,
+      "mean_energy_proxy": 0.6181,
+      "recall": 0.9846
+    },
+    {
+      "attack_id": "attack2",
+      "param_type": "interval",
+      "n": 130,
+      "mean_realized_factor": 0.8763,
+      "mean_zeroed_fraction": 0.125,
+      "mean_energy_proxy": 0.1357,
+      "recall": 1.0
+    },
+    {
+      "attack_id": "attack3",
+      "param_type": null,
+      "n": 130,
+      "mean_realized_factor": 0.4465,
+      "mean_zeroed_fraction": 0.003,
+      "mean_energy_proxy": 0.5535,
+      "recall": 1.0
+    },
+    {
+      "attack_id": "attack4",
+      "param_type": "interval",
+      "n": 119,
+      "mean_realized_factor": 0.9387,
+      "mean_zeroed_fraction": 0.0004,
+      "mean_energy_proxy": 0.084,
+      "recall": 0.9496
+    },
+    {
+      "attack_id": "attack5",
+      "param_type": null,
+      "n": 130,
+      "mean_realized_factor": 0.5003,
+      "mean_zeroed_fraction": 0.0,
+      "mean_energy_proxy": 0.4997,
+      "recall": 0.9923
+    },
+    {
+      "attack_id": "attack6",
+      "param_type": "factor",
+      "n": 130,
+      "mean_realized_factor": 0.6312,
+      "mean_zeroed_fraction": 0.0,
+      "mean_energy_proxy": 0.3724,
+      "recall": 0.9846
+    },
+    {
+      "attack_id": "attack7",
+      "param_type": "factor",
+      "n": 105,
+      "mean_realized_factor": 0.3513,
+      "mean_zeroed_fraction": 0.3104,
+      "mean_energy_proxy": 0.6487,
+      "recall": 0.9524
+    },
+    {
+      "attack_id": "attack9",
+      "param_type": null,
+      "n": 130,
+      "mean_realized_factor": 1.0008,
+      "mean_zeroed_fraction": 0.0,
+      "mean_energy_proxy": 0.0426,
+      "recall": 1.0
+    },
+    {
+      "attack_id": "attackieee",
+      "param_type": null,
+      "n": 130,
+      "mean_realized_factor": 0.499,
+      "mean_zeroed_fraction": 0.5021,
+      "mean_energy_proxy": 0.501,
+      "recall": 0.7692
+    }
+  ],
+  "original_baseline": {
+    "n": 130,
+    "false_positives": 96,
+    "specificity": 0.26153846153846155
+  },
+  "corr_severity_vs_detection": 0.008721330795337929
+}

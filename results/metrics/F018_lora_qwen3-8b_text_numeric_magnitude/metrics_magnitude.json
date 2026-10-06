@@ -1,0 +1,269 @@
+{
+  "handle": "F018_lora_qwen3-8b_text_numeric_magnitude",
+  "regime": "explainability_csv",
+  "ground_truth": "realized relative daily-energy reduction recomputed from readings (analysis.severity.sample_severity; = the S5 severity proxy); window = CSV observed_interval_start/end (attack2/4)",
+  "conventions": {
+    "primary_mae": "unconditional over manipulated magnitude rows (attack9/10 excluded); a predicted-original row counts as rho_pred=0.00",
+    "missing": "rows flagged manipulated but with no parseable magnitude (schema violations); excluded from mae, bounded by mae_worst_case"
+  },
+  "populations": {
+    "n_eval": 1650,
+    "n_magnitude_scored": 1260,
+    "n_shape_only": 260,
+    "n_benign": 130,
+    "n_truth_unmatched": 0
+  },
+  "magnitude": {
+    "n": 1260,
+    "mae": 0.0321,
+    "rmse": 0.0508,
+    "mae_ci": {
+      "lo": 0.0286,
+      "hi": 0.0369,
+      "n_clusters": 65
+    },
+    "mae_detected_only": {
+      "n": 1253,
+      "mae": 0.0322,
+      "rmse": 0.0509
+    },
+    "missing_rate": 0.0,
+    "mae_worst_case_imputed": 0.0321,
+    "pearson": 0.9846,
+    "spearman": 0.9757,
+    "bucket_edges": [
+      0.0,
+      0.1,
+      0.3,
+      0.6,
+      1.0
+    ],
+    "bucket_accuracy": 0.8817,
+    "bucket_confusion": [
+      [
+        114,
+        23,
+        1,
+        0
+      ],
+      [
+        30,
+        153,
+        12,
+        0
+      ],
+      [
+        2,
+        16,
+        482,
+        29
+      ],
+      [
+        0,
+        0,
+        36,
+        362
+      ]
+    ]
+  },
+  "window": {
+    "n_true_windows": 249,
+    "pred_coverage": 0.9558,
+    "mean_iou": 0.8739,
+    "median_iou": 1.0,
+    "boundary_mae_intervals": 0.9496,
+    "false_window_rate_other_attacks": 0.001
+  },
+  "per_attack": [
+    {
+      "attack_id": "attack0",
+      "n": 130,
+      "mae": 0.0,
+      "mean_rho_true": 1.0,
+      "mean_rho_pred": 1.0
+    },
+    {
+      "attack_id": "attack1",
+      "n": 126,
+      "mae": 0.0291,
+      "mean_rho_true": 0.5205,
+      "mean_rho_pred": 0.5303
+    },
+    {
+      "attack_id": "attack12",
+      "n": 130,
+      "mae": 0.03,
+      "mean_rho_true": 0.6181,
+      "mean_rho_pred": 0.611
+    },
+    {
+      "attack_id": "attack2",
+      "n": 130,
+      "mae": 0.0419,
+      "mean_rho_true": 0.1357,
+      "mean_rho_pred": 0.1148
+    },
+    {
+      "attack_id": "attack3",
+      "n": 130,
+      "mae": 0.0272,
+      "mean_rho_true": 0.5535,
+      "mean_rho_pred": 0.5502
+    },
+    {
+      "attack_id": "attack4",
+      "n": 119,
+      "mae": 0.0454,
+      "mean_rho_true": 0.084,
+      "mean_rho_pred": 0.0532
+    },
+    {
+      "attack_id": "attack5",
+      "n": 130,
+      "mae": 0.0279,
+      "mean_rho_true": 0.4997,
+      "mean_rho_pred": 0.5015
+    },
+    {
+      "attack_id": "attack6",
+      "n": 130,
+      "mae": 0.0426,
+      "mean_rho_true": 0.3724,
+      "mean_rho_pred": 0.3635
+    },
+    {
+      "attack_id": "attack7",
+      "n": 105,
+      "mae": 0.03,
+      "mean_rho_true": 0.6487,
+      "mean_rho_pred": 0.6379
+    },
+    {
+      "attack_id": "attackieee",
+      "n": 130,
+      "mae": 0.0473,
+      "mean_rho_true": 0.501,
+      "mean_rho_pred": 0.4885
+    }
+  ],
+  "shape_only": {
+    "attacks": [
+      "attack9",
+      "attack10"
+    ],
+    "n": 260,
+    "mean_claimed_rho": 0.0116,
+    "mean_true_rho": 0.0425
+  },
+  "benign": {
+    "n": 130,
+    "pred_original_with_magnitude_rate": 0.0,
+    "n_false_positives": 18,
+    "fp_mean_claimed_rho": 0.0667
+  },
+  "controls": {
+    "class_prior_train_means": {
+      "attack0": 1.0,
+      "attack1": 0.5597,
+      "attack10": 0.0449,
+      "attack12": 0.6089,
+      "attack2": 0.1374,
+      "attack3": 0.5481,
+      "attack4": 0.0801,
+      "attack5": 0.4979,
+      "attack6": 0.3947,
+      "attack7": 0.6195,
+      "attack9": 0.0448,
+      "attackieee": 0.4962,
+      "original": 0.0449
+    },
+    "prior_predicted_class": {
+      "n": 1260,
+      "mae": 0.0897,
+      "rmse": 0.1378,
+      "ci": {
+        "lo": 0.0829,
+        "hi": 0.0974,
+        "n_clusters": 65
+      }
+    },
+    "prior_gold_class": {
+      "n": 1260,
+      "mae": 0.0903,
+      "rmse": 0.1385,
+      "ci": {
+        "lo": 0.0834,
+        "hi": 0.0981,
+        "n_clusters": 65
+      }
+    },
+    "llm_minus_prior_predicted": {
+      "lo": -0.0631,
+      "hi": -0.0524,
+      "n_clusters": 65,
+      "point_diff": -0.0576,
+      "contains_zero": false
+    },
+    "llm_minus_prior_gold": {
+      "lo": -0.0641,
+      "hi": -0.0528,
+      "n_clusters": 65,
+      "point_diff": -0.0582,
+      "contains_zero": false
+    },
+    "ridge": {
+      "n": 1260,
+      "mae": 0.1313,
+      "rmse": 0.1602,
+      "ci": {
+        "lo": 0.1247,
+        "hi": 0.1391,
+        "n_clusters": 65
+      }
+    },
+    "gbm": {
+      "n": 1260,
+      "mae": 0.0012,
+      "rmse": 0.002,
+      "ci": {
+        "lo": 0.0011,
+        "hi": 0.0013,
+        "n_clusters": 65
+      }
+    }
+  },
+  "interference": {
+    "vs_handle": "F010_lora_qwen3-8b_text_numeric",
+    "n_shared_rows": 1650,
+    "delta_macro_f1": {
+      "metric": "macro_f1",
+      "point_diff": 0.0057,
+      "lo": -0.0043,
+      "hi": 0.0157,
+      "contains_zero": true,
+      "n_clusters": 65,
+      "n_boot": 10000
+    },
+    "delta_balanced_accuracy": {
+      "metric": "balanced_accuracy",
+      "point_diff": -0.0137,
+      "lo": -0.04,
+      "hi": 0.0122,
+      "contains_zero": true,
+      "n_clusters": 65,
+      "n_boot": 10000
+    },
+    "mcnemar_binary": {
+      "discordant": 21,
+      "b_wrong_a_right": 11,
+      "a_wrong_b_right": 10,
+      "p_value": 1.0
+    },
+    "mcnemar_multiclass": {
+      "discordant": 74,
+      "b_wrong_a_right": 42,
+      "a_wrong_b_right": 32,
+      "p_value": 0.29541
+    }
+  }
+}

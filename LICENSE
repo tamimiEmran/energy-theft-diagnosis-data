@@ -1,0 +1,18 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+The derived benchmark, predictions, metric files and accompanying documentation
+are distributed under CC BY 4.0:
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+Copyright 2026 Emran Altamimi, Moaz Jemmieh, Abdulaziz Al-Ali,
+and Qutaibah M. Malluhi for their contributions.
+
+Original consumption data:
+Trindade, A. (2015). ElectricityLoadDiagrams20112014 [Dataset].
+UCI Machine Learning Repository. https://doi.org/10.24432/C58C86
+The source dataset is licensed under CC BY 4.0.
+
+Changes to the source data include consumer-day selection, synthetic attack
+transformations, serialized reference-week/query-day inputs, labels, teacher
+rationales, and model evaluation outputs. Cite both the original UCI dataset
+and this derived release, and identify modifications when redistributing it.
